@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Ajax-app</title>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-md py-4 navbar-dark bg-dark">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#">Ajax-app</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex mt-md-0 mt-3">
+                    <input id="search" class="form-control me-2" type="search" placeholder="Search your task"
+                        aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="row mt-3 px-3">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form id="taskForm">
+                        <div class="mb-3">
+                            <label class="form-label">Name Task</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name task">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea id="description" cols="30" rows="10" placeholder="Task description "
+                                class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark form-control">Save task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>                    
+                    </tr>
+                </thead>
+                <tbody id="tasks">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
