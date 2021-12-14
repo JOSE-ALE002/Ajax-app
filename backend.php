@@ -25,7 +25,6 @@ if (!empty($search)) {
     $jsonstring = json_encode($json);
 
     echo $jsonstring;
-
 } else {
     $result = $pdo->query("SELECT * FROM tasks");
 
@@ -47,4 +46,3 @@ if (!empty($search)) {
 
     echo $jsonstring;
 }
-
